@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<head th:include="fragments/header :: head">
+</head>
+
+<body>
+
+	<div
+		th:include="fragments/body :: headline (txt='nun kannst du loslegen !!!' )"></div>
+	<div th:include="fragments/body :: nav (all=true)"></div>
+
+	<section class="container">
+		<div class="section-title h5">deine chats mit</div>
+
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="card col-12 col-lg-3 col-md-4 col-sm-6"
+					th:each="chat : ${listAllChats}">
+					<div class="card-body text-center ">
+						<h4 class="card-title" th:text="${chat.chatWith}"></h4>
+						<p>
+							<span th:if="${chat.newPosts > 0}" class="badge badge-primary"
+								th:text="${chat.newPosts}">NEW</span>
+						<p>
+						<form th:action="@{/posts(to=${chat.chatWith}) }" method="post">
+							<input type="submit" class="btn btn-outline-primary btn-sm"
+								value="quatschen mit">
+						</form>
+						<p>
+						<form th:action="@{/deleteChat(to=${chat.chatWith}) }"
+							method="post">
+							<input type="submit" class="btn btn-outline-danger btn-sm"
+								value="löschen">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<br>
+	<div th:include="fragments/footer :: footer"></div>
+
+</body>
+</html>
