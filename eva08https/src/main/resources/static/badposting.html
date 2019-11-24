@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+	  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" 
+	  crossorigin="anonymous">
+
+<title>EvaChatApp</title>
+
+<link rel="stylesheet" type="text/css" href="/css/mystyle.css"
+	th:href="@{/css/mystyle.css}" media="screen">
+
+<!--   <link rel="import" href="http://ocal.lo:9090/users/1/">  -->
+
+<!-- <script>
+    $(document).ready(function () {
+    var req = new XMLHttpRequest();
+
+    req.open('GET', 'http://ocal.lo:9090/users/1/', true);
+    req.onreadystatechange = function() {
+        if (req.readyState === 4) {
+            console.log(req.responseText);
+        }
+    };
+//    req.setRequestHeader('Accept', 'application/json');
+    req.send();
+    })
+    </script>
+	
+	<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+-->
+</head>
+
+
+<body>
+	<!-- onload="document.forms[0].submit()">  -->
+
+	<div class="container">
+		<br>
+		<header>
+			<h6 class="text-center">trau dich !!!</h6>
+		</header>
+		<br>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand p-1 mr-5">EvaChatApp</a> <a
+				class="navbar-nav p-1"> <!--  <form action="/add?to=marga" method="post"> -->
+				<form action="http://localhost:8080/add?to=marga" method="post">
+					<input type="hidden" name="pcontent" value="5678 :: reingelegt!!!">
+					<input type="submit" class="btn btn-outline-primary"
+						value="aber zurueck zum chat geht es hier">
+				</form>
+			</a>
+		</nav>
+
+		<!-- <img src="http://ocal.lo:9090/users/1">  -->
+
+		<img src="http://localhost:8080/add?to=marga&pcontent=haha">
+
+		<h3>
+			<span th:if="${currentUser != null}"
+				th:text="${fromUser} + ' quatschen mit ' +  ${toUser}">nett
+				das du da bist, </span>
+		</h3>
+
+		<div></div>
+
+
+
+	</div>
+
+	<div class="container">
+		<footer> &copy; XYZ CoKG, Copyright (c): xyz,
+			2019 </footer>
+	</div>
+</body>
+</html>
