@@ -1,0 +1,46 @@
+*.iml
+.gradle
+.idea
+*/build
+.DS_Store
+gradle/**
+#eva08https\src\main\resources\keystore.jks
+eva08https/src/main/resources/keystore.jks
+
+### STS ###
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### eclipse
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+/.metadata/
+/.recommenders/

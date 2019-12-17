@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+
+		<table th:if="${listAllPosts != null}"
+			class="table table-hover table-bordered table-fixed">
+			<thead>
+				<tr>
+					<th scope="col">post &nbsp;<i class="fas fa-arrow-circle-right"></i></th>
+					<th scope="col">post &nbsp;<i class="fas fa-arrow-circle-left"></i></th>
+					<th scope="col">zeit</th>
+					<th scope="col">gelesen</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="post : ${listAllPosts}">
+					<td th:if="${post.type.equals('out')}" class="word-wrap" th:text="${post.content}">nix</td>
+					<td></td>
+					<td th:if="${post.type.equals('in')}" class="word-wrap" th:text="${post.content}">nix</td>
+
+					<td th:text="${post.timestamp}">nix</td>
+
+					<td th:if="${post.type.equals('out') }" th:text="${post.read}">nix</td>
+					<td th:unless="${post.type.equals('out') }"></td>
+
+				</tr>
+			</tbody>
+		</table>
+
+</html>
