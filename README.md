@@ -46,7 +46,7 @@ entwickelt worden.
 Als Entwicklungsumgebungen können u.a. Eclipse, SpringToolsSuite 4 (damit sind die Projekte entwickelt worden) oder IntelliJ sowie ... verwendet werden.  
 
 # Neuere Spring und Spring Boot 2 Versionen
-Die Buch-Projekte funktionieren grundsätzlich auch mit Spring Boot 2.2. Sobald ich die Buch-Projekte durchgetestet habe, werde ich eventuelle
+Die Buch-Projekte funktionieren grundsätzlich auch mit Spring Boot 2.2. Sobald ich die Buch-Projekte damit durchgetestet habe, werde ich eventuelle
 Änderungen hier vorstellen und beschreiben. Java Versionen > 11 werde ich erst später ausprobieren.
 
 
