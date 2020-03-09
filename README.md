@@ -1,6 +1,6 @@
 # Repo zum Buch "Entwicklung verteilter Anwendungen"
 Im Buch wird in die Entwicklung verteilter Anwendungen unter Verwendung des Spring Boot 2 Frameworks eingeführt. 
-Das Buch wird in nächster Zeit im Springer-Verlag erscheinen, hier der Link zur [Buchseite vom Springer-Verlag](https://www.springer.com/de/book/9783658268138)
+Das Buch ist im Springer-Verlag erscheinen, hier der Link zur [Buchseite vom Springer-Verlag](https://www.springer.com/de/book/9783658268138)
 und der Link zu [meiner Buchseite](https://evaspringbuch.de).
 
 # Beispiel-Anwendung EvaChatApp
@@ -44,6 +44,10 @@ Die Buch-Projekte sind mit den Versionen
 entwickelt worden.
 
 Als Entwicklungsumgebungen können u.a. Eclipse, SpringToolsSuite 4 (damit sind die Projekte entwickelt worden) oder IntelliJ sowie ... verwendet werden.  
+
+# Neuere Spring und Spring Boot 2 Versionen
+Die Buch-Projekte funktionieren grundsätzlich auch mit Spring Boot 2.2. Sobald ich die Buch-Projekte durchgetestet habe, werde ich eventuelle
+Änderungen hier vorstellen und beschreiben. Java Versionen > 11 werde ich erst später ausprobieren.
 
 
 ## diese Seite ist noch im Aufbau und wird immer wieder aktualisiert
