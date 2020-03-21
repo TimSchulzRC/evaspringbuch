@@ -36,11 +36,11 @@ Grundlagen
 # Eingesetzte Frameworks
 Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell master und Branch springboot-2.2.5 identisch sind.
 
-|  | **master** | **springboot-2.2.5**        | **springboot-2.1.2** |
-| ------ | :---: | :---: | :---: |
+|  | **master** | **springboot-2.2.5** | **springboot-2.1.2** |
+| --- | :---: | :---: | :---: |
 | Spring Boot | 2.2.5 | 2.2.5 | 2.1.2 |
 | Spring Framework | 5.2.4  | 5.2.4  | 5.1.4 |
-| Spring Data | 2.2.5 (Moore SR5) | 2.2.5 (Moore SR5) | 2.1.4 |
+| Spring Data | 2.2.5 | 2.2.5 | 2.1.4 |
 | Spring Security | 5.2.2 | 5.2.2 | 5.1.3 |
 | Java | 11 | 11 | 11 |
 | JUnit | 5 | 5 | 4 |
