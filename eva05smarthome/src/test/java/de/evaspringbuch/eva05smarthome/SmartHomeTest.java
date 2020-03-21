@@ -4,23 +4,16 @@ package de.evaspringbuch.eva05smarthome;
 import static org.assertj.core.api.Assertions.assertThat;
 //import static org.junit.Assert.assertThat;
 
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import de.evaspringbuch.eva05smarthome.Eva05SmartHome;
 import de.evaspringbuch.eva05smarthome.complete.domain.PersonInHouse;
 import de.evaspringbuch.eva05smarthome.complete.domain.PersonInHouseRepository;
 import de.evaspringbuch.eva05smarthome.complete.domain.Room;
 import de.evaspringbuch.eva05smarthome.complete.domain.RoomRepository;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = Eva05SmartHome.class)
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SmartHomeTest {

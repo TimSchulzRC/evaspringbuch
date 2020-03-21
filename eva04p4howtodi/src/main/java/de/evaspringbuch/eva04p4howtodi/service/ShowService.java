@@ -1,4 +1,4 @@
-package de.evaspringbuch.eva04howtodi.service;
+package de.evaspringbuch.eva04p4howtodi.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

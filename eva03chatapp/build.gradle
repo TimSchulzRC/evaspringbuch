@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.2.RELEASE'
+		springBootVersion = '2.2.5.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -26,12 +26,11 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-data-jpa',
             'com.h2database:h2',
-            'javax.xml.bind:jaxb-api:2.3.0',
+            'javax.xml.bind:jaxb-api:2.3.1',
             'org.springframework.boot:spring-boot-starter-thymeleaf',
     )
-    testImplementation(
-            'org.springframework.boot:spring-boot-starter-test'
-    )
+    testImplementation('org.springframework.boot:spring-boot-starter-test') 
+    
 }
 
 

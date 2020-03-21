@@ -1,7 +1,6 @@
 package de.evaspringbuch.eva10transaction;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = Eva10ChatApp.class)
+//@SpringBootTest //(classes = Eva10ChatApp.class)
 public class ServiceTest {
 
 //    @Autowired

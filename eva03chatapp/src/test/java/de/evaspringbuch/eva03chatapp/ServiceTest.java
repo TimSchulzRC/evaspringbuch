@@ -4,12 +4,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.transaction.Transactional;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 
 import de.evaspringbuch.eva03chatapp.chat.domain.Chat;
 import de.evaspringbuch.eva03chatapp.chat.domain.ChatRepository;
@@ -19,8 +19,8 @@ import de.evaspringbuch.eva03chatapp.chat.service.ChatUserService;
 import de.evaspringbuch.eva03chatapp.post.domain.PostRepository;
 import de.evaspringbuch.eva03chatapp.post.service.PostService;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Eva03ChatApp.class)
+@SpringBootTest //(classes = Eva03ChatApp.class)
+@DirtiesContext(classMode=ClassMode.AFTER_CLASS)
 public class ServiceTest {
 
     @Autowired
@@ -36,13 +36,15 @@ public class ServiceTest {
     @Autowired
     PostService postService;
 
+//    String elisa , marga , unknown , emptyUser ;
     String elisa = "elisa", marga = "marga", unknown = "unknown", emptyUser = "";
 
-    @Before
+
+    @BeforeEach
     public void setupDB() {
         System.out.println("tests are starting");
-    }
-
+//        String elisa = "elisa", marga = "marga", unknown = "unknown", emptyUser = "";
+}
 
     @Test
     @Transactional

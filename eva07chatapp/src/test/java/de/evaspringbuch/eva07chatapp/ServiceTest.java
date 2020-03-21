@@ -1,13 +1,15 @@
 package de.evaspringbuch.eva07chatapp;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import javax.transaction.Transactional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import de.evaspringbuch.eva07chatapp.Eva07ChatApp;
 import de.evaspringbuch.eva07chatapp.chat.domain.Chat;
 import de.evaspringbuch.eva07chatapp.chat.domain.ChatRepository;
 import de.evaspringbuch.eva07chatapp.chat.domain.ChatUserRepository;
@@ -17,12 +19,7 @@ import de.evaspringbuch.eva07chatapp.post.domain.PostRepository;
 import de.evaspringbuch.eva07chatapp.post.service.PostService;
 import de.evaspringbuch.eva07chatapp.security.domain.UserRepository;
 
-import javax.transaction.Transactional;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Eva07ChatApp.class)
+@SpringBootTest //(classes = Eva07ChatApp.class)
 public class ServiceTest {
 
     @Autowired
@@ -43,7 +40,7 @@ public class ServiceTest {
 
     String elisa = "elisa", marga = "marga", unknown = "unknown", emptyUser = "";
 
-    @Before
+    @BeforeEach
     public void setupDB() {
     }
 

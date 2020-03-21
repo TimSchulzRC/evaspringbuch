@@ -6,13 +6,10 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import de.evaspringbuch.eva06smarthomeadvanced.Eva06SmartHomeAdvanced;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Building;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.BuildingRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Person;
@@ -22,7 +19,6 @@ import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Room;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.RoomRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.Gender;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest//(classes = Eva06SmartHomeAdvanced.class)
 public class SmartHomeAdvancedTest {
 

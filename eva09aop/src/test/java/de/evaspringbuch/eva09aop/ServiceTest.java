@@ -1,7 +1,6 @@
 package de.evaspringbuch.eva09aop;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = Eva09Aop.class)
+//@SpringBootTest //(classes = Eva09Aop.class)
 public class ServiceTest {
 
 //    @Autowired

@@ -1,4 +1,4 @@
-package de.evaspringbuch.eva04howtodi.service;
+package de.evaspringbuch.eva04p4howtodi.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
