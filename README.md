@@ -34,20 +34,39 @@ Grundlagen
 * Events und Aktualisierung
 
 # Eingesetzte Frameworks
-Die Buch-Projekte sind mit den Versionen
-* Java 11,
-* Spring Framework 5.1.4,
-* Spring Boot 2.1.2,
-* Spring Data 2.1.4 sowie
-* Spring Security 5.1.3
+Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell master und Branch springboot-2.2.5 identisch sind.
 
-entwickelt worden.
+|  | **master** | **springboot-2.2.5**        | **springboot-2.1.2** |
+| ------ | :---: | :---: | :---: |
+| Spring Boot | 2.2.5 | 2.2.5 | 2.1.2 |
+| Spring Framework | 5.2.4  | 5.2.4  | 5.1.4 |
+| Spring Data | 2.2.5 (Moore SR5) | 2.2.5 (Moore SR5) | 2.1.4 |
+| Spring Security | 5.2.2 | 5.2.2 | 5.1.3 |
+| Java | 11 | 11 | 11 |
+| JUnit | 5 | 5 | 4 |
+| Bootstrap | 4.3.1 | 4.3.1 | 4.2.1 |
+| gradle | 6.1 | 6.1 | 5.1.1 |
+
+
+
+
+**Änderungen**
+* Spring Boot 2.1.2 zu Spring Boot 2.2.5
+    * JUnit 4 durch JUnit 5 ersetzt
+        * Annotation `@Before` wird zu `@BeforeEach`
+        * in den Testklassen `@DirtiesContext(classMode=ClassMode.AFTER_CLASS)` bei den Annotationen der Klasse hinzugefügt. GRUND: wenn mehrere Testklassen ausgeführt werden sollen, 
+        wird jeweils der Kontext nach Durchführung aller Testmethoden einer Klasse zurückgesetzt. Damit werden Abhängigkeiten in der Ausführungsreihenfolge der Testklassen verhindert.
+
+# Code downloaden oder mit git clonen
+
+für Master
+
+    git clone https://gitlab.com/wogo/evaspringbuch.git
+
+für Branch (z. B. für den Branch springboot-2.1.2)
+
+    git clone -branch springboot-2.1.2 https://gitlab.com/wogo/evaspringbuch.git
 
 Als Entwicklungsumgebungen können u.a. Eclipse, SpringToolsSuite 4 (damit sind die Projekte entwickelt worden) oder IntelliJ sowie ... verwendet werden.  
 
-# Neuere Spring und Spring Boot 2 Versionen
-Die Buch-Projekte funktionieren grundsätzlich auch mit Spring Boot 2.2. Sobald ich die Buch-Projekte damit durchgetestet habe, werde ich eventuelle
-Änderungen hier vorstellen und beschreiben. Java Versionen > 11 werde ich erst später ausprobieren.
-
-
-## diese Seite ist noch im Aufbau und wird immer wieder aktualisiert
+Als Build-Managment-Tool kommt gradle zum Einsatz.
