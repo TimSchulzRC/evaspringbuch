@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.2.5.RELEASE'
+		springBootVersion = '2.3.4.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -24,6 +24,7 @@ repositories {
 dependencies {
     implementation(
             'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-validation',
             'org.springframework.boot:spring-boot-starter-data-jpa',
             'com.h2database:h2',
             'javax.xml.bind:jaxb-api:2.3.0',

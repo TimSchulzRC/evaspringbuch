@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import de.evaspringbuch.eva08https.chat.domain.Chat;
@@ -38,10 +40,13 @@ public class InitializeDB {
 
         LOGGER.debug("Db initialized");
 
+        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+
+        
         User user = new User();
         user.setNickname("elisa");
         user.setEmail("el@a");
-        user.setPasswordHash(new BCryptPasswordEncoder().encode("demo"));
+        user.setPasswordHash(passwordEncoder.encode("demo"));
                
         user.setRole(Role.ADMIN);
         userRepository.save(user);
@@ -49,14 +54,14 @@ public class InitializeDB {
         user = new User();
         user.setNickname("marga");
         user.setEmail("ma@a");
-        user.setPasswordHash(new BCryptPasswordEncoder().encode("demo"));
+        user.setPasswordHash(passwordEncoder.encode("demo"));
         user.setRole(Role.USER);
         userRepository.save(user);
 
         user = new User();
         user.setNickname("frieda");
         user.setEmail("fr@a");
-        user.setPasswordHash(new BCryptPasswordEncoder().encode("demo"));
+        user.setPasswordHash(passwordEncoder.encode("demo"));
         user.setRole(Role.USER);
         userRepository.save(user);
 

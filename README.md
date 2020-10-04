@@ -10,47 +10,50 @@ Der zur Verfügung gestellte Programmcode muss nicht immer sofort ausführbar se
 
 # Inhalt
 Grundlagen
- 
+
 * Erste Schritte zur Anwendung
- 
+
 * Eine kleine Chat-Anwendung mit Spring MVC
- 
+
 * Ein Blick hinter die Kulissen von Dependency Injection
- 
+
 * Speichern von Model-Daten mit Spring Data
- 
+
 * Bearbeiten von Model-Daten mit Spring Data
- 
+
 * Die EvaChatApp unter der Haube
- 
+
 * Sicherheit geht vor – Schutz vor Angriffen und nicht autorisierten Zugriffen
- 
+
 * Aspektorientierte Programmierung (AOP)
- 
+
 * Transaktionen – alles oder nichts
- 
+
 * Rest – zwei Apps arbeiten Hand in Hand
- 
+
 * Events und Aktualisierung
 
 # Eingesetzte Frameworks
-Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell master und Branch springboot-2.2.5 identisch sind.
+Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell der master mit Spring Boot 2.3.4 gebuildet ist.
 
 |  | **master** | **springboot-2.2.5** | **springboot-2.1.2** |
 | --- | :---: | :---: | :---: |
-| Spring Boot | 2.2.5 | 2.2.5 | 2.1.2 |
-| Spring Framework | 5.2.4  | 5.2.4  | 5.1.4 |
-| Spring Data | 2.2.5 | 2.2.5 | 2.1.4 |
-| Spring Security | 5.2.2 | 5.2.2 | 5.1.3 |
+| Spring Boot | **2.3.4** | 2.2.5 | 2.1.2 |
+| Spring Framework | 5.2.9  | 5.2.4  | 5.1.4 |
+| Spring Data | Neumann | 2.2.5 | 2.1.4 |
+| Spring Security | 5.3 | 5.2.2 | 5.1.3 |
 | Java | 11 | 11 | 11 |
 | JUnit | 5 | 5 | 4 |
 | Bootstrap | 4.3.1 | 4.3.1 | 4.2.1 |
-| gradle | 6.1 | 6.1 | 5.1.1 |
-
-
-
+| gradle | 6.3 | 6.1 | 5.1.1 |
 
 **Änderungen**
+
+* Spring Boot 2.2.5 durch Spring Boot 2.3.4
+    * in den `build.gradle` Dateien `eva07chatapp`, `eva07chatappuiadvanced`, `eva08csrffront`, `eva08https`, `eva11chatapp`,  `eva12chatappevent`, `eva12chatappeventjs` ist unter Implementation die Zeile
+          `'org.springframework.boot:spring-boot-starter-validation',`
+  hinzugefügt worden. GRUND: die Abhängigkeit (Dependency) zu `javax.validation` wird nicht mehr automatisch aufgelöst. 
+
 * Spring Boot 2.1.2 zu Spring Boot 2.2.5
     * JUnit 4 durch JUnit 5 ersetzt
         * Annotation `@Before` wird zu `@BeforeEach`
