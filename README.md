@@ -53,6 +53,9 @@ Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell de
     * in den `build.gradle` Dateien `eva07chatapp`, `eva07chatappuiadvanced`, `eva08csrffront`, `eva08https`, `eva11chatapp`,  `eva12chatappevent`, `eva12chatappeventjs` ist unter Implementation die Zeile
           `'org.springframework.boot:spring-boot-starter-validation',`
   hinzugefügt worden. GRUND: die Abhängigkeit (Dependency) zu `javax.validation` wird nicht mehr automatisch aufgelöst. 
+    * die Verwendung der h2-Console ohne weitere Konfiguration hat sich etwas geändert. Die JDBC-URL wird anders als zuvor festgelegt. Als JDBC-URL ist nun auf der Spring-Console folgender String  `jdbc:h2:mem:896ab7dd-c95f-4205-a0e7-b052f282b5b7` zu finden, wobei der letzte Teil (hinter `mem:`) eine UUID als Datenbankname darstellt. Den vollständigen String muss man als JDBC-URL verwenden. Bei jedem Neustart der Anwendung wird die JDBC-URL bzw. der Datenbankname neu generiert. Wer das nicht möchte, kann den ursprünglichen Default (Datenbankname `testdb`) mit einer der beiden Einstellungen in der `application.properties` festlegen
+        * `spring.datasource.url=jdbc:h2:mem:testdb`
+        * `spring.datasource.generate-unique-name=false`
 
 * Spring Boot 2.1.2 zu Spring Boot 2.2.5
     * JUnit 4 durch JUnit 5 ersetzt
