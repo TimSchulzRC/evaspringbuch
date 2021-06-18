@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.3.4.RELEASE'
+		springBootVersion = '2.4.6'
 	}
 	repositories {
 		mavenCentral()
@@ -30,7 +30,7 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-thymeleaf',
             'javax.xml.bind:jaxb-api:2.3.0',
 			'org.springframework.boot:spring-boot-starter-security',
-			'org.springframework.boot:spring-boot-devtools'
+			//'org.springframework.boot:spring-boot-devtools'
     )
     testImplementation(
             'org.springframework.boot:spring-boot-starter-test'

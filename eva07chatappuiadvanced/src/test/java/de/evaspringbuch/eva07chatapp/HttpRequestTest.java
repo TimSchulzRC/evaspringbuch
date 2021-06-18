@@ -11,7 +11,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpSession;
@@ -24,6 +27,7 @@ import de.evaspringbuch.eva07chatapp.security.domain.CurrentUser;
 import de.evaspringbuch.eva07chatapp.security.domain.UserRepository;
 
 @SpringBootTest 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class HttpRequestTest {
 	
 	@Autowired private WebApplicationContext wac;
@@ -41,7 +45,9 @@ public class HttpRequestTest {
     }
 
     @Test
+    @Order(1)
     public void testNewchat() throws Exception {
+    	System.out.println("first");
     	mockMvc.perform(
 			 	get("/newchat")
 			 	.session(mocksession)
@@ -55,7 +61,9 @@ public class HttpRequestTest {
     }
     
     @Test
+    @Order(2)
     public void testPostToChat() throws Exception {
+    	System.out.println("second");
         mockMvc.perform(
         			post("/add")
 	        		.session(mocksession)
