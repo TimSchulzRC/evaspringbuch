@@ -34,7 +34,9 @@ Grundlagen
 * Events und Aktualisierung
 
 # Eingesetzte Frameworks
-Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell der master mit Spring Boot 2.3.4 gebuildet ist.
+Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell der master mit Spring Boot 2.4.6 gebuildet ist.
+
+Die Beschreibung der Änderungen folgt umgehend ...
 
 |  | **master** | **springboot-2.2.5** | **springboot-2.1.2** |
 | --- | :---: | :---: | :---: |
