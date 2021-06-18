@@ -49,7 +49,7 @@ Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell de
 
 **Änderungen**
 
-* Spring Boot 2.2.5 durch Spring Boot 2.3.4
+* Spring Boot 2.2.5 zu Spring Boot 2.3.4
     * in den `build.gradle` Dateien `eva07chatapp`, `eva07chatappuiadvanced`, `eva08csrffront`, `eva08https`, `eva11chatapp`,  `eva12chatappevent`, `eva12chatappeventjs` ist unter Implementation die Zeile
           `'org.springframework.boot:spring-boot-starter-validation',`
   hinzugefügt worden. GRUND: die Abhängigkeit (Dependency) zu `javax.validation` wird nicht mehr automatisch aufgelöst. 
