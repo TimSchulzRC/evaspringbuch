@@ -38,19 +38,23 @@ Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell de
 
 Die Beschreibung der Änderungen folgt umgehend ...
 
-|  | **master** | **springboot-2.2.5** | **springboot-2.1.2** |
-| --- | :---: | :---: | :---: |
-| Spring Boot | **2.3.4** | 2.2.5 | 2.1.2 |
-| Spring Framework | 5.2.9  | 5.2.4  | 5.1.4 |
-| Spring Data | Neumann | 2.2.5 | 2.1.4 |
-| Spring Security | 5.3 | 5.2.2 | 5.1.3 |
-| Java | 11 | 11 | 11 |
-| JUnit | 5 | 5 | 4 |
-| Bootstrap | 4.3.1 | 4.3.1 | 4.2.1 |
-| gradle | 6.3 | 6.1 | 5.1.1 |
+|  | **master** | **springboot-2.3.4** | **springboot-2.2.5** | **springboot-2.1.2** |
+| --- | :---: | :---: | :---: | :---: |
+| Spring Boot | **2.4.6** | 2.3.4 | 2.2.5 | 2.1.2 |
+| Spring Framework | 5.3.7  | 5.2.9  | 5.2.4  | 5.1.4 |
+| Spring Data | 2020.0.9 | Neumann | 2.2.5 | 2.1.4 |
+| Spring Security | 5.4 | 5.3 | 5.2.2 | 5.1.3 |
+| Java | 11 | 11 | 11 | 11 |
+| JUnit | 5 | 5 | 5 | 4 |
+| Bootstrap | 4.6.0 | 4.3.1 | 4.3.1 | 4.2.1 |
+| gradle | 6.8 | 6.3 | 6.1 | 5.1.1 |
 
 **Änderungen**
 
+* Spring Boot 2.3.4 zu Spring Boot 2.4.6
+    * in allen `build.gradle`: Das Namensschema für springBootVersion ist geändert worden. Nun gilt `springBootVersion = '2.4.6'`. Der Zusatz RELEASE entfällt.
+    * in allen Projekten, die jpa verwenden, ist in den application.properties die "alte" Datenbank-Konfiguration mit `spring.datasource.generate-unique-name=false` (Details in dem Abschnitt Spring Boot 2.2.5 durch Spring Boot 2.3.4) vorgenommen worden.
+    * `bootstrap`-Version von 4.3.1 auf 4.6.0 geändert, inklusive Änderungen von `jquery.js` und `popper.js`
 * Spring Boot 2.2.5 zu Spring Boot 2.3.4
     * in den `build.gradle` Dateien `eva07chatapp`, `eva07chatappuiadvanced`, `eva08csrffront`, `eva08https`, `eva11chatapp`,  `eva12chatappevent`, `eva12chatappeventjs` ist unter Implementation die Zeile
           `'org.springframework.boot:spring-boot-starter-validation',`
@@ -58,7 +62,6 @@ Die Beschreibung der Änderungen folgt umgehend ...
     * die Verwendung der h2-Console ohne weitere Konfiguration hat sich etwas geändert. Die JDBC-URL wird anders als zuvor festgelegt. Als JDBC-URL ist nun auf der Spring-Console folgender String  `jdbc:h2:mem:896ab7dd-c95f-4205-a0e7-b052f282b5b7` zu finden, wobei der letzte Teil (hinter `mem:`) eine UUID als Datenbankname darstellt. Den vollständigen String muss man als JDBC-URL verwenden. Bei jedem Neustart der Anwendung wird die JDBC-URL bzw. der Datenbankname neu generiert. Wer das nicht möchte, kann den ursprünglichen Default (Datenbankname `testdb`) mit einer der beiden Einstellungen in der `application.properties` festlegen
         * `spring.datasource.url=jdbc:h2:mem:testdb`
         * `spring.datasource.generate-unique-name=false`
-
 * Spring Boot 2.1.2 zu Spring Boot 2.2.5
     * JUnit 4 durch JUnit 5 ersetzt
         * Annotation `@Before` wird zu `@BeforeEach`
