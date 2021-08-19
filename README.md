@@ -34,21 +34,23 @@ Grundlagen
 * Events und Aktualisierung
 
 # Eingesetzte Frameworks
-Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell der master mit Spring Boot 2.4.6 gebuildet ist.
+Die Buch-Projekte stehen in folgenden Versionen zur Verfügung, wobei aktuell der master mit Spring Boot 2.5.3 gebuildet ist.
 
-|  | **master** | **springboot-2.3.4** | **springboot-2.2.5** | **springboot-2.1.2** |
-| --- | :---: | :---: | :---: | :---: |
-| Spring Boot | **2.4.6** | 2.3.4 | 2.2.5 | 2.1.2 |
-| Spring Framework | 5.3.7  | 5.2.9  | 5.2.4  | 5.1.4 |
-| Spring Data | 2020.0.9 | Neumann | 2.2.5 | 2.1.4 |
-| Spring Security | 5.4 | 5.3 | 5.2.2 | 5.1.3 |
-| Java | 11 | 11 | 11 | 11 |
-| JUnit | 5 | 5 | 5 | 4 |
-| Bootstrap | 4.6.0 | 4.3.1 | 4.3.1 | 4.2.1 |
-| gradle | 6.8 | 6.3 | 6.1 | 5.1.1 |
+|  | **master** | **springboot-2.4.6** | **springboot-2.3.4** | **springboot-2.2.5** | **springboot-2.1.2** |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| Spring Boot | **2.5.3** | 2.4.6 | 2.3.4 | 2.2.5 | 2.1.2 |
+| Spring Framework | 5.3.9  | 5.3.7  | 5.2.9  | 5.2.4  | 5.1.4 |
+| Spring Data | 2021.0.3 | 2020.0.9 | Neumann | 2.2.5 | 2.1.4 |
+| Spring Security | 5.5 | 5.4 | 5.3 | 5.2.2 | 5.1.3 |
+| Java | 11 | 11 | 11 | 11 | 11 |
+| JUnit | 5 | 5 | 5 | 5 | 4 |
+| Bootstrap | 4.6.0 | 4.6.0 | 4.3.1 | 4.3.1 | 4.2.1 |
+| gradle | 7.2 | 6.8 | 6.3 | 6.1 | 5.1.1 |
 
 **Änderungen**
 
+* Spring Boot 2.4.6 zu Spring Boot 2.5.3
+    * keine Änderungen, Compiler-Compatibility auf Java 11 einstellen
 * Spring Boot 2.3.4 zu Spring Boot 2.4.6
     * in allen `build.gradle`: Das Namensschema für springBootVersion ist geändert worden. Nun gilt `springBootVersion = '2.4.6'`. Der Zusatz RELEASE entfällt.
     * in allen Projekten, die jpa verwenden, ist in den application.properties die "alte" Datenbank-Konfiguration mit `spring.datasource.generate-unique-name=false` (Details in dem Abschnitt Spring Boot 2.2.5 durch Spring Boot 2.3.4) vorgenommen worden.
