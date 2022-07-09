@@ -1,6 +1,5 @@
 package de.evaspringbuch.eva07chatapp.chat.boundary;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import de.evaspringbuch.eva07chatapp.chat.domain.Chat;
 import de.evaspringbuch.eva07chatapp.chat.domain.ChatUser;
 import de.evaspringbuch.eva07chatapp.chat.service.ChatUserService;
 import de.evaspringbuch.eva07chatapp.chat.service.dto.ChatDTO;

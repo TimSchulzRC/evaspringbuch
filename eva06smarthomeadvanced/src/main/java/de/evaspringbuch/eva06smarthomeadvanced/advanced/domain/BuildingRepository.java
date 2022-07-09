@@ -1,11 +1,9 @@
 package de.evaspringbuch.eva06smarthomeadvanced.advanced.domain;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.BuildingBaseRepository;
-
-import java.util.List;
 
 public interface BuildingRepository extends JpaRepository<Building, Integer> {
 

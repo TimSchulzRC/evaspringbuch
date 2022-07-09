@@ -1,8 +1,8 @@
 package de.evaspringbuch.eva12chatappevent.chat.domain;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ChatRepository extends JpaRepository<Chat, Long> {
 

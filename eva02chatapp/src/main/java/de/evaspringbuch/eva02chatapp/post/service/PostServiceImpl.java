@@ -1,5 +1,7 @@
 package de.evaspringbuch.eva02chatapp.post.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +12,6 @@ import de.evaspringbuch.eva02chatapp.chat.domain.ChatUser;
 import de.evaspringbuch.eva02chatapp.chat.service.ChatService;
 import de.evaspringbuch.eva02chatapp.chat.service.ChatUserService;
 import de.evaspringbuch.eva02chatapp.post.domain.Post;
-
-import java.util.List;
 
 @Service
 public class PostServiceImpl implements PostService {

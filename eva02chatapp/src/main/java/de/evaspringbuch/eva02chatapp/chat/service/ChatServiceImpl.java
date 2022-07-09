@@ -1,5 +1,10 @@
 package de.evaspringbuch.eva02chatapp.chat.service;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,11 +14,6 @@ import de.evaspringbuch.eva02chatapp.chat.domain.Chat;
 import de.evaspringbuch.eva02chatapp.chat.domain.ChatRepository;
 import de.evaspringbuch.eva02chatapp.chat.domain.ChatUser;
 import de.evaspringbuch.eva02chatapp.post.domain.Post;
-
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
 
 @Service
 public class ChatServiceImpl implements ChatService {

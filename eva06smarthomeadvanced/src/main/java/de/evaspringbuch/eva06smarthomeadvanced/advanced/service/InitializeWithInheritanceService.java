@@ -1,7 +1,5 @@
 package de.evaspringbuch.eva06smarthomeadvanced.advanced.service;
 
-import java.util.Arrays;
-
 import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
@@ -12,12 +10,10 @@ import org.springframework.stereotype.Service;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Address;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.AddressRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Building;
-import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Person;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.PersonInHouseRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.PersonRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.RoomRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.BuildingWithInheritanceRepository;
-import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.Gender;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.OfficeBuilding;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.OfficeBuildingRepository;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance.PrivateHouse;

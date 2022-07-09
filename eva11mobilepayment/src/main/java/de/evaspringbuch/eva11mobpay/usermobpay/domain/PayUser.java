@@ -1,13 +1,15 @@
 package de.evaspringbuch.eva11mobpay.usermobpay.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.OneToOne;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 //import org.springframework.hateoas.ResourceSupport;
 
 import de.evaspringbuch.eva11mobpay.common.BaseEntity;
-
-import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 public class PayUser extends BaseEntity<Long> {

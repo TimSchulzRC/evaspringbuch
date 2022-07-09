@@ -1,27 +1,23 @@
 package de.evaspringbuch.eva08csrffront.config;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import de.evaspringbuch.eva08csrffront.chat.domain.*;
+import de.evaspringbuch.eva08csrffront.chat.domain.Chat;
+import de.evaspringbuch.eva08csrffront.chat.domain.ChatRepository;
+import de.evaspringbuch.eva08csrffront.chat.domain.ChatUser;
+import de.evaspringbuch.eva08csrffront.chat.domain.ChatUserRepository;
 import de.evaspringbuch.eva08csrffront.post.domain.Post;
 import de.evaspringbuch.eva08csrffront.post.domain.PostRepository;
 import de.evaspringbuch.eva08csrffront.security.domain.Role;
 import de.evaspringbuch.eva08csrffront.security.domain.User;
 import de.evaspringbuch.eva08csrffront.security.domain.UserRepository;
-
-import javax.annotation.PostConstruct;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
-
-import static java.time.format.DateTimeFormatter.ofLocalizedTime;
 
 @Component
 public class InitializeDB {

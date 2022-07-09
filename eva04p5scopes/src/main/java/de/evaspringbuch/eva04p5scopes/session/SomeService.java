@@ -1,13 +1,11 @@
 package de.evaspringbuch.eva04p5scopes.session;
 
+import java.util.UUID;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.WebApplicationContext;
-
-import java.util.UUID;
 
 
 //@Scope(value = "prototype") //prototype, singleton, request

@@ -1,7 +1,12 @@
 package de.evaspringbuch.eva05smarthome.complete.domain;
 
-import javax.persistence.*;
 import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class PersonInHouse implements Serializable {

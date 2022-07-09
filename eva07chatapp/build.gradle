@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.5.3'
+		springBootVersion = '2.6.8'
 	}
 	repositories {
 		mavenCentral()
@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-sourceCompatibility = 11
+sourceCompatibility = 17
 
 repositories {
 	mavenCentral()

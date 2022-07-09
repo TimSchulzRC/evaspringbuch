@@ -7,11 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.transaction.annotation.Transactional;
 
 import de.evaspringbuch.eva10transaction.tryTransaction.Account;
 import de.evaspringbuch.eva10transaction.tryTransaction.AccountRepository;
-import de.evaspringbuch.eva10transaction.tryTransaction.IsolationService;
 import de.evaspringbuch.eva10transaction.tryTransaction.OutTransferService;
 
 @SpringBootApplication

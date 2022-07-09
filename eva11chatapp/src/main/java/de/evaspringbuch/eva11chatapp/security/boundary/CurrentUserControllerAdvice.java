@@ -11,11 +11,11 @@ import de.evaspringbuch.eva11chatapp.security.domain.CurrentUser;
 @ControllerAdvice
 public class CurrentUserControllerAdvice {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CurrentUserControllerAdvice.class);
+    private static final Logger log = LoggerFactory.getLogger(CurrentUserControllerAdvice.class);
 
     @ModelAttribute("currentUser")
     public CurrentUser getCurrentUser(Authentication authentication) {
-//        LOGGER.debug("authentication = " + authentication);
+//        log.debug("authentication = " + authentication);
         return (authentication == null) ? null : (CurrentUser) authentication.getPrincipal();
     }
 

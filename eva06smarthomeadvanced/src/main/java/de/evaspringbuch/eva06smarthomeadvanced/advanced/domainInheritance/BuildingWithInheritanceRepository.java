@@ -1,11 +1,11 @@
 package de.evaspringbuch.eva06smarthomeadvanced.advanced.domainInheritance;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Building;
 import de.evaspringbuch.eva06smarthomeadvanced.advanced.domain.Room;
-
-import java.util.List;
 
 public interface BuildingWithInheritanceRepository extends BuildingBaseRepository<Building> {
 

@@ -7,9 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * Created by wo on 19.04.2016.
- */
 @Entity
 public class Account implements Serializable {
     @Id

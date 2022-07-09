@@ -1,12 +1,12 @@
 package de.evaspringbuch.eva04p3completebeanlifecycle.service;
 
+import java.lang.reflect.Field;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Configuration;
-
-import java.lang.reflect.Field;
 
 @Configuration
 public class CustomBeanPostProcessor implements BeanPostProcessor {

@@ -1,12 +1,15 @@
 package de.evaspringbuch.eva07chatapp.chat.domain;
 
-import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import de.evaspringbuch.eva07chatapp.common.BaseEntity;
 import de.evaspringbuch.eva07chatapp.post.domain.Post;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Chat extends BaseEntity<Long> {

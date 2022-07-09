@@ -1,5 +1,14 @@
 package de.evaspringbuch.eva02chatapp.config;
 
+import static java.time.format.DateTimeFormatter.ofLocalizedTime;
+
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
+
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +20,6 @@ import de.evaspringbuch.eva02chatapp.chat.domain.ChatUser;
 import de.evaspringbuch.eva02chatapp.chat.domain.ChatUserRepository;
 import de.evaspringbuch.eva02chatapp.post.domain.Post;
 import de.evaspringbuch.eva02chatapp.post.domain.PostRepository;
-
-import javax.annotation.PostConstruct;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
-
-import static java.time.format.DateTimeFormatter.ofLocalizedTime;
 
 @Component
 public class InitializeDB {

@@ -1,14 +1,14 @@
 package de.evaspringbuch.eva07chatapp.chat.domain;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import de.evaspringbuch.eva07chatapp.common.BaseEntity;
-
-import javax.persistence.*;
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.MapKey;
+import javax.persistence.OneToMany;
+
+import de.evaspringbuch.eva07chatapp.common.BaseEntity;
 
 @Entity
 public class ChatUser extends BaseEntity<Long> {

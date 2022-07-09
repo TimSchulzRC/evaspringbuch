@@ -1,15 +1,11 @@
 package de.evaspringbuch.eva12chatappevent.security.service.currentuser;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import de.evaspringbuch.eva12chatappevent.security.domain.CurrentUser;
 import de.evaspringbuch.eva12chatappevent.security.domain.User;

@@ -1,5 +1,7 @@
 package de.evaspringbuch.eva11mobpay.usermobpay.config;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +10,6 @@ import org.springframework.stereotype.Component;
 import de.evaspringbuch.eva11mobpay.usermobpay.domain.PayUser;
 import de.evaspringbuch.eva11mobpay.usermobpay.domain.PayUserRepository;
 import de.evaspringbuch.eva11mobpay.usermobpay.domain.State;
-
-import javax.annotation.PostConstruct;
 
 @Component
 public class InitializeDB {

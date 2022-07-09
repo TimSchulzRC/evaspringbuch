@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import de.evaspringbuch.eva07chatapp.post.domain.Post;
 import de.evaspringbuch.eva07chatapp.post.service.PostService;
 import de.evaspringbuch.eva07chatapp.post.service.dto.PostDTO;
 import de.evaspringbuch.eva07chatapp.security.domain.CurrentUser;

@@ -1,11 +1,16 @@
 package de.evaspringbuch.eva03chatapp.chat.domain;
 
-import javax.persistence.*;
-
-import de.evaspringbuch.eva03chatapp.post.domain.Post;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import de.evaspringbuch.eva03chatapp.post.domain.Post;
 
 
 @Entity

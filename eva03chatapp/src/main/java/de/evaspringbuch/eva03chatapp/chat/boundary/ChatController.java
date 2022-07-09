@@ -1,5 +1,8 @@
 package de.evaspringbuch.eva03chatapp.chat.boundary;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import de.evaspringbuch.eva03chatapp.chat.domain.Chat;
 import de.evaspringbuch.eva03chatapp.chat.domain.ChatUser;
-import de.evaspringbuch.eva03chatapp.chat.service.ChatService;
 import de.evaspringbuch.eva03chatapp.chat.service.ChatUserService;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class ChatController {

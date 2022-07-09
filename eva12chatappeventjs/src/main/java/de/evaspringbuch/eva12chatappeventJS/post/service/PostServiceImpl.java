@@ -15,7 +15,6 @@ import de.evaspringbuch.eva12chatappeventJS.chat.domain.ChatUser;
 import de.evaspringbuch.eva12chatappeventJS.chat.service.ChatService;
 import de.evaspringbuch.eva12chatappeventJS.chat.service.ChatUserService;
 import de.evaspringbuch.eva12chatappeventJS.post.domain.Post;
-import de.evaspringbuch.eva12chatappeventJS.post.domain.PostRepository;
 import de.evaspringbuch.eva12chatappeventJS.post.service.dto.PayActionResponseDTO;
 import de.evaspringbuch.eva12chatappeventJS.post.service.dto.PostDTO;
 

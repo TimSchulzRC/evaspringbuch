@@ -1,9 +1,8 @@
 package de.evaspringbuch.eva06smarthomeadvanced.advanced.domain;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PersonInHouseRepository extends JpaRepository<PersonInHouse, Integer> {
 
