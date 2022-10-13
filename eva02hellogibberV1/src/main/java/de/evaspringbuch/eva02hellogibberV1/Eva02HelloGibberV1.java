@@ -11,40 +11,40 @@ import org.springframework.context.annotation.Bean;
 
 
 // first version
+//@SpringBootApplication
+//public class Eva02HelloGibberV1 {
+//
+//    private static final Logger log = LoggerFactory.getLogger(Eva02HelloGibberV1.class);
+//
+//    @Autowired
+//    private HelloController helloController;
+//    public static void main(String[] args) {
+//        SpringApplication.run(Eva02HelloGibberV1.class);
+//    }
+//
+//    @Bean
+//    CommandLineRunner init() {
+//        return (evt) -> log.debug(helloController.helloMessage("Hallo"));
+//    }
+//}
+
+// second version
 @SpringBootApplication
 public class Eva02HelloGibberV1 {
 
-    private static final Logger log = LoggerFactory.getLogger(Eva02HelloGibberV1.class);
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(Eva02HelloGibberV1.class);
     @Autowired
     private HelloController helloController;
+
     public static void main(String[] args) {
         SpringApplication.run(Eva02HelloGibberV1.class);
     }
 
-    @Bean
-    CommandLineRunner init() {
-        return (evt) -> log.debug(helloController.helloMessage("Hallo"));
-    }
+  @Bean
+  CommandLineRunner init() {
+      return (evt) -> {
+          LOGGER.debug(helloController.helloMessage("hallo"));
+          LOGGER.debug(helloController.helloMessage("nochmal hallo"));
+      };
+  }
 }
-
-// second version
-//@SpringBootApplication
-//public class eva02HelloGibberV1 {
-//
-//	private static final Logger LOGGER = LoggerFactory.getLogger(eva02HelloGibberV1.class);
-//    @Autowired
-//    private HelloController helloController;
-//
-//    public static void main(String[] args) {
-//        SpringApplication.run(eva02HelloGibberV1.class);
-//    }
-//
-//  @Bean
-//  CommandLineRunner init() {
-//      return (evt) -> {
-//          LOGGER.debug(helloController.helloMessage("hallo"));
-//          LOGGER.debug(helloController.helloMessage("nochmal hallo"));
-//      };
-//  }
-//}
