@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Eva02ChatApp<eva02chatapp>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "de.evaspringbuch.eva02chatapp.Eva02ChatApp",
+      "projectName": "eva02chatapp",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

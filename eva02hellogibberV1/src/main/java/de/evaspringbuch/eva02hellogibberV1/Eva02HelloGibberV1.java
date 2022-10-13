@@ -1,34 +1,30 @@
 package de.evaspringbuch.eva02hellogibberV1;
 
+import de.evaspringbuch.eva02hellogibberV1.boundary.HelloController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import de.evaspringbuch.eva02hellogibberV1.service.HelloService;
-
-
 
 // first version
 @SpringBootApplication
 public class Eva02HelloGibberV1 {
 
-    @Autowired
-    private HelloService helloService;
+    private static final Logger log = LoggerFactory.getLogger(Eva02HelloGibberV1.class);
 
+    @Autowired
+    private HelloController helloController;
     public static void main(String[] args) {
         SpringApplication.run(Eva02HelloGibberV1.class);
     }
 
     @Bean
     CommandLineRunner init() {
-        return (evt) -> {
-            System.out.println(helloService.setMyMessage("Hallo Welt"));
-            System.out.println(helloService.getMyMessage());
-            System.out.println(helloService.setMyMessage("Hallo lass uns quatschen"));
-            System.out.println(helloService.getMyMessage());
-        };
+        return (evt) -> log.debug(helloController.helloMessage("Hallo"));
     }
 }
 

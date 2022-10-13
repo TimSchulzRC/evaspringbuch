@@ -4,6 +4,7 @@
 */build
 .DS_Store
 gradle/**
+*.log
 
 ### STS ###
 .classpath
@@ -13,7 +14,6 @@ gradle/**
 .springBeans
 
 ### eclipse
-.project
 .metadata
 bin/**
 tmp/**
@@ -23,14 +23,11 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-.classpath
 .settings/
 .loadpath
 
 ### IntelliJ IDEA ###
-.idea
 *.iws
-*.iml
 *.ipr
 
 ### NetBeans ###
