@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 public class HelloService {
 
     private String myMessage;
+    private int count = 0;
+
+    public int inc () {
+        return ++count;
+    }
 
     public String getMyMessage() {
         return myMessage;
